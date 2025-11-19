@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seach</title>
+    <link rel="stylesheet" href="programms.css">
+
+
+</head>
+
+<body>
+
+    <div class="search-container">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="#"><img src="../../picture/navbar/logo.png" alt=""></a>
+                <a href="#">
+                    <h1>MyCourse.io</h1>
+                </a>
+            </div>
+            <div class="navbar-center">
+                <input type="text" placeholder="Search for coure" class="search-input" />
+            </div>
+            <div class="navbar-right">
+                <p>Become Instructor</p>
+                <img class="cart" src="../../picture/navbar/cart.png" alt="">
+                <img class="cart" src="../../picture/navbar/logo3.png" alt="">
+                <img id="dropdown" class="cart" src="../../picture/navbar/logo2.png" alt="">
+
+                <!-- DROPDOWN MENU -->
+                <div id="dropdownMenu" class="dropdown-menu hidden">
+                    <div class="user-info">
+                        <strong>Jonathan Doe</strong>
+                        <p>doe.jonathan@email.com</p>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li>My Courses</li>
+                        <li>My Cart</li>
+                        <li>Wishlist</li>
+                        <li>Notifications</li>
+                        <li>Account Settings</li>
+                    </ul>
+                    <hr>
+                    <a href="../Homepage/index.html">
+                        <p class="logout">Logout</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const dropdownBtn = document.getElementById('dropdown');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+
+            dropdownBtn.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('visible');
+            });
+
+            // Sahifa bo'ylab bosilganda dropdownni yopish
+            document.addEventListener('click', (e) => {
+                if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.remove('visible');
+                }
+            });
+        </script>
+
+        <div class="programms-container">
+
+            <div class="filter">
+                <div class="filter-title">
+                    <h1>Filter</h1>
+                    <h2>Clear</h2>
+                </div>
+
+                <div class="rating">
+                    <h1 class="rating-h1">Rating <span class="arrow">></span></h1>
+                    <div class="radio-box">
+                        <div class="radio-stars">
+                            <input type="radio" name="radio">
+                            <img src="../../picture/searching/five.png" alt="">
+                        </div>
+                        <div class="radio-stars">
+                            <input type="radio" name="radio">
+                            <img src="../../picture/searching/four.png" alt="">
+                        </div>
+                        <div class="radio-stars">
+                            <input type="radio" name="radio">
+                            <img src="../../picture/searching/three.png" alt="">
+                        </div>
+                    </div>
+                    <script>
+                        const title = document.querySelector(".rating-h1");
+                        const box = document.querySelector(".radio-box");
+                        const arrow = document.querySelector(".arrow");
+
+                        title.addEventListener("click", () => {
+                            box.classList.toggle("active");      // ochilish / yopilish
+                            arrow.classList.toggle("rotate");    // strelkani aylantirish
+                        });
+                    </script>
+                </div>
+
+
+                <div class="video-box">
+                    <h2 class="video-title">Video duration
+                        <span class="video-arrow">></span>
+                    </h2>
+                    <div class="video-content">
+                        <div class="check-list">
+                            <input type="checkbox" name="check">
+                            <p>0-2 Hours (9.4K)</p>
+                        </div>
+                        <div class="check-list">
+                            <input type="checkbox" name="check">
+                            <p>3-5 Hours (4.1K)</p>
+                        </div>
+                        <div class="check-list">
+                            <input type="checkbox" name="check">
+                            <p>6-12 Hours (3.8K)</p>
+                        </div>
+                        <div class="check-list">
+                            <input type="checkbox" name="check">
+                            <p>12 Hours (1K)</p>
+                        </div>
+                    </div>
+                    <script>
+                        const videoTitle = document.querySelector(".video-title");
+                        const videoContent = document.querySelector(".video-content");
+                        const videoArrow = document.querySelector(".video-arrow");
+                        videoTitle.addEventListener("click", () => {
+                            videoContent.classList.toggle("active");
+                            videoArrow.classList.toggle("rotate");
+                        });
+                    </script>
+                </div>
+
+
+                <div class="category">
+                    <h1 class="category-title">Category <span class="category-arrow">></span></h1>
+                    <div class="category-content">
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Design (3.2K)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Programming (1.4K)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Business & Marketing (809)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Finance (548)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Music & Film (1.9K)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Photo & Video (2.3K)</p>
+                        </div>
+                        <div class="category-list">
+                            <input type="checkbox" name="check">
+                            <p>Writing (753)</p>
+                        </div>
+
+                        <script>
+                            const categoryTitle = document.querySelector(".category-title");
+                            const categoryContent = document.querySelector(".category-content");
+                            const categoryArrow = document.querySelector(".category-arrow");
+
+                            categoryTitle.addEventListener("click", () => {
+                                categoryContent.classList.toggle("active");
+                                categoryArrow.classList.toggle("rotate");
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="software">
+                    <h1 class="software-title">Software <span class="software-arrow">></span></h1>
+                    <div class="software-content">
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Frontend</p>
+                        </div>
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Backend</p>
+                        </div>
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Web Design</p>
+                        </div>
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Data since</p>
+                        </div>
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Security</p>
+                        </div>
+                        <div class="software-list">
+                            <input type="checkbox" name="check">
+                            <p>Mobile dev</p>
+                        </div>
+
+                        <script>
+                            const softwareTitle = document.querySelector(".software-title");
+                            const softwareContent = document.querySelector(".software-content");
+                            const softwareArrow = document.querySelector(".software-arrow");
+
+                            softwareTitle.addEventListener("click", () => {
+                                softwareContent.classList.toggle("active");
+                                softwareArrow.classList.toggle("rotate");
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="level">
+                    <h1 class="level-title">Level <span class="level-arrow">></span></h1>
+                    <div class="level-content">
+                        <div class="level-list">
+                            <input type="radio" name="check">
+                            <p>All levels</p>
+                        </div>
+                        <div class="level-list">
+                            <input type="radio" name="check">
+                            <p>Beginner</p>
+                        </div>
+                        <div class="level-list">
+                            <input type="radio" name="check">
+                            <p>Intermediate</p>
+                        </div>
+                        <div class="level-list">
+                            <input type="radio" name="check">
+                            <p>Advanced</p>
+                        </div>
+
+                        <script>
+                            const levelTitle = document.querySelector(".level-title");
+                            const levelContent = document.querySelector(".level-content");
+                            const levelArrow = document.querySelector(".level-arrow");
+
+                            levelTitle.addEventListener("click", () => {
+                                levelContent.classList.toggle("active");
+                                levelArrow.classList.toggle("rotate");
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <h1 class="language-title">Language <span class="software-arrow">></span></h1>
+                    <div class="language-content">
+                        <div class="language-list">
+                            <input type="checkbox" name="check">
+                            <p>English</p>
+                        </div>
+                        <div class="language-list">
+                            <input type="checkbox" name="check">
+                            <p>Russian</p>
+                        </div>
+                        <div class="language-list">
+                            <input type="checkbox" name="check">
+                            <p>Uzbek</p>
+                        </div>
+                        <div class="language-list">
+                            <input type="checkbox" name="check">
+                            <p>Turkish</p>
+                        </div>
+                        <div class="language-list">
+                            <input type="checkbox" name="check">
+                            <p>Spain</p>
+                        </div>
+
+                        <script>
+                            const languageTitle = document.querySelector(".language-title");
+                            const languageContent = document.querySelector(".language-content");
+                            const languageArrow = document.querySelector(".language-arrow");
+
+                            languageTitle.addEventListener("click", () => {
+                                languageContent.classList.toggle("active");
+                                languageArrow.classList.toggle("rotate");
+                            });
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ----programms--- -->
+
+            <div class="programms">
+                <div class="show-results">
+                    <p class="find-title">Showing 2,312 results of <span class="title-span">UI Design</span></p>
+                    <select class="find-category" name="" id="">
+                        <option value="">Most Popular</option>
+                        <option value="">Most wieved</option>
+                        <option value="">Most finded</option>
+                    </select>
+                </div>
+                <div class="programm-cards">
+                    <div class="cards-container" id="cardsContainer">
+                        <div class="trending-right" id="trendingCardsContainer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <div class="footer-category">
+                <div class="footer-logo">
+                    <a href="#"><img src="../../picture/navbar/logo.png" alt=""></a>
+                    <a href="#">
+                        <h1>MyCourse.io</h1>
+                    </a>
+                </div>
+                <div class="footer-part1">
+                    <ul>
+                        <li><a href="">Web Programming</a></li>
+                        <li><a href="">Mobile Programming</a></li>
+                        <li><a href="">Java Beginner</a></li>
+                        <li><a href="">PHP Beginner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-part2">
+                    <ul>
+                        <li><a href="">Adobe Illustrator</a></li>
+                        <li><a href="">Adobe Photoshop</a></li>
+                        <li><a href="">Design Logo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-part3">
+                    <ul>
+                        <li><a href="">Writing course</a></li>
+                        <li><a href="">Photography</a></li>
+                        <li><a href="">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <h1 class="footer-h1">Copyright © MyCourse.io 2025. All Rights Reserved</h1>
+                <div class="social">
+                    <a href=""><img src="../../picture/footer/tvitter.png" alt="" srcset=""></a>
+                    <a href=""><img src="../../picture/footer/instagram.png"></a>
+                    <a href=""> <img src="../../picture/footer/facebook.png"> </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="programms.js"></script>
+</body>
+
+</html>

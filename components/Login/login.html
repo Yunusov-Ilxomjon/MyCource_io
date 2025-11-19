@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <span class="close-btn"><a class="close-btn" href="../Homepage/index.html">x</a></span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" id="login" placeholder="Login" required>
+      </div>
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Enter</button>
+    </form>
+    <a class="login-a" href="../SignUp/signup.html">Ro'yxatdan o'tish</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="login.js"></script>
+</body>
+</html>

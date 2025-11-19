@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MODAL LAYOUT */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  width: 400px;
+  max-width: 95%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #3dcbB1;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 18px 15px 45px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3dcbB1;
+  box-shadow: 0 0 8px rgba(61, 203, 177, 0.5);
+}
+
+.modal-content button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #3dcbB1, #35a892);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 25px rgba(61, 203, 177, 0.4);
+}
+
+.modal-content .login-a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #3dcbB1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.modal-content .login-a:hover {
+  color: #35a892;
+}
+
+/* TOAST NOTIFICATIONS */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 16px 22px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  max-width: 90%;
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background: linear-gradient(90deg, #4BB543, #34a853);
+}
+
+.toast.error {
+  background: linear-gradient(90deg, #FF3333, #cc0000);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 30px 35px;
+  }
+
+  .modal-content h2 {
+    font-size: 26px;
+  }
+
+  .modal-content button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 22px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 12px 15px 12px 40px;
+  }
+
+  .modal-content button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .toast {
+    top: 10px;
+    right: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

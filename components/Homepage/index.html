@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCourse_io</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="#"><img src="../../picture/navbar/logo.png" alt=""></a>
+                <a href="#">
+                    <h1>MyCourse.io</h1>
+                </a>
+            </div>
+            <div class="navbar-center">
+                <input type="text" placeholder="Search for coure" class="search-input" />
+            </div>
+            <div class="navbar-right">
+                <img class="cart" src="../../picture/navbar/cart.png" alt="">
+                <div class="login">
+                    <a href="../Login/login.html"> <button class="login">Login</button></a>
+                </div>
+                <a href="../SignUp/signup.html"> <button class="signup">
+                        <img width="16px" height="16px" src="../../picture/navbar/moon.png" alt="">
+                        <h1>Sign Up</h1>
+                    </button></a>
+            </div>
+        </div>
+
+        <div id="modalContainer"></div>
+
+        <section class="section">
+            <div class="back">
+                <div class="category">
+                    <div class="category-top">
+                        <h1>What do you want to learn?</h1>
+                    </div>
+                    <div class="category-bottom">
+                        <ul>
+                            <li><a href="#">Find courses, skills, software, etc</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Topic</a></li>
+                        </ul>
+                        <a href="../Programms/programms.html"> <button>Search</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-course">
+                <div class="course_name">
+                    <h1>Browse Our Top Courses</h1>
+                </div>
+                <div class="course_category">
+                    <ul>
+                        <li><a href="">Design</a></li>
+                        <li><a href="">Developper</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">Marketing</a></li>
+                        <li><a href="">Photograpy</a></li>
+                    </ul>
+                </div>
+                <div class="cards-container" id="cardsContainer">
+                    <!-- <div class="cards">
+                        <img class="cards-img" src="../../picture/course/card1.png" alt="">
+                        <h2 class="title-h2">Adobe Illustrator Scretch Course</h2>
+                        <div class="cards-contact">
+                            <img width="18px" height="18px" src="../../picture/course/contact.png" alt="">
+                            <a href="#">Kitani Studio</a>
+                        </div>
+                        <div class="cards-stars">
+                            <img class="cards-stars-logo" src="../../picture/course/stars.png" alt="">
+                            <h3 class="title-h3">(1.2K)</h3>
+                        </div>
+                        <h1 class="title-h1">$24.92 <span>$32.90</span></h1>
+                    </div> -->
+                </div>
+
+            </div>
+
+
+
+            <div class="join-klevr">
+                <div class="join-text">
+                    <h1>Join Klevr now to get 35% off</h1>
+                    <p>With our responsive themes and mobile and desktop apps, <br>
+                        enjoy a seamless experience on any device so will your
+                        blog the best visitors
+                    </p>
+                    <button class="join-btn">Join Klevr</button>
+                </div>
+                <div class="join-img">
+                    <img src="../../picture/course/join-img.png" alt="">
+                </div>
+            </div>
+
+
+            <!-- ----trending courses-------- -->
+
+            <div class="trending-course">
+                <h1>Trending Courses</h1>
+                <div class="trending-img">
+                    <div class="trending-left"></div>
+                    <div class="trending-right" id="trendingCardsContainer">
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----Up coming webinar---- -->
+
+            <div class="webinar-container">
+                <h1 class="h1">Upcoming Webinar </h1>
+                <div class="webinar" id="webinar"></div>
+            </div>
+
+            <div class="reccomend">
+                <h1 class="reccomend-title">Get personal learning recommendations based on your needs</h1>
+                <button class="reccomend-btn">Get Started</button>
+            </div>
+
+
+
+
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="footer-category">
+                <div class="footer-logo">
+                    <a href="#"><img src="../../picture/navbar/logo.png" alt=""></a>
+                    <a href="#">
+                        <h1>MyCourse.io</h1>
+                    </a>
+                </div>
+                <div class="footer-part1">
+                    <ul>
+                        <li><a href="">Web Programming</a></li>
+                        <li><a href="">Mobile Programming</a></li>
+                        <li><a href="">Java Beginner</a></li>
+                        <li><a href="">PHP Beginner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-part2">
+                    <ul>
+                        <li><a href="">Adobe Illustrator</a></li>
+                        <li><a href="">Adobe Photoshop</a></li>
+                        <li><a href="">Design Logo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-part3">
+                    <ul>
+                        <li><a href="">Writing course</a></li>
+                        <li><a href="">Photography</a></li>
+                        <li><a href="">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <h1 class="footer-h1">Copyright © MyCourse.io 2025. All Rights Reserved</h1>
+                <div class="social">
+                    <a href=""><img src="../../picture/footer/tvitter.png" alt="" srcset=""></a>
+                    <a href=""><img src="../../picture/footer/instagram.png"></a>
+                    <a href=""> <img src="../../picture/footer/facebook.png"> </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="../Login/login.js"></script>
+    <script src="../SignUp/signup.js"></script>
+    <!-- <script src="indexModal.js"></script> -->
+    <script src="index.js"></script>
+    <script src="webinar.js"></script>
+
+
+</body>
+
+</html>
